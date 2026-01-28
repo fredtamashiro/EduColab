@@ -26,6 +26,70 @@ const materialsSeed = [
   },
   {
     id: 'm2',
+    ownerId: 't1',
+    title: 'Progressões Aritméticas e Geométricas',
+    subject: 'Matemática',
+    grade: '2º ano',
+    summary: 'PA e PG com aplicações financeiras simples.',
+    content:
+      'Definição, termos gerais, somatório e exemplos de juros simples e compostos.',
+    isPublic: true,
+    deleted: false,
+    clonedFromId: null,
+    updatedAt: '2026-01-19T08:40:00',
+    lastExamAt: null,
+    lastExamQuestionCount: 0,
+  },
+  {
+    id: 'm3',
+    ownerId: 't1',
+    title: 'Trigonometria no triângulo retângulo',
+    subject: 'Matemática',
+    grade: '1º ano',
+    summary: 'Seno, cosseno e tangente com problemas visuais.',
+    content:
+      'Razões trigonométricas, ângulos notáveis e aplicações em situações reais.',
+    isPublic: false,
+    deleted: false,
+    clonedFromId: null,
+    updatedAt: '2026-01-21T15:10:00',
+    lastExamAt: null,
+    lastExamQuestionCount: 0,
+  },
+  {
+    id: 'm4',
+    ownerId: 't1',
+    title: 'Geometria analítica: reta e distância',
+    subject: 'Matemática',
+    grade: '3º ano',
+    summary: 'Equação da reta e distância entre pontos.',
+    content:
+      'Coeficiente angular, paralelismo, distância ponto-reta e exercícios guiados.',
+    isPublic: true,
+    deleted: false,
+    clonedFromId: null,
+    updatedAt: '2026-01-16T11:25:00',
+    lastExamAt: null,
+    lastExamQuestionCount: 0,
+  },
+  {
+    id: 'm5',
+    ownerId: 't1',
+    title: 'Estatística básica e interpretação de gráficos',
+    subject: 'Matemática',
+    grade: '1º ano',
+    summary: 'Média, mediana, moda e leitura de gráficos.',
+    content:
+      'Análise de dados simples, construção de gráficos e interpretação crítica.',
+    isPublic: false,
+    deleted: false,
+    clonedFromId: null,
+    updatedAt: '2026-01-17T09:00:00',
+    lastExamAt: null,
+    lastExamQuestionCount: 0,
+  },
+  {
+    id: 'm6',
     ownerId: 't2',
     title: 'Brasil República: Primeira República',
     subject: 'História',
@@ -40,35 +104,179 @@ const materialsSeed = [
     lastExamAt: null,
     lastExamQuestionCount: 0,
   },
-]
-
-const examsSeed = [
   {
-    id: 'e1',
-    ownerId: 't1',
-    materialId: 'm1',
-    title: 'Prova - Funções do 2º grau',
-    questions: [
-      {
-        id: 'q1',
-        type: 'mcq',
-        prompt: 'Qual é o coeficiente que define a concavidade da parábola?',
-        options: ['a', 'b', 'c', 'd'],
-        answer: 'a',
-        difficulty: 'F',
-      },
-      {
-        id: 'q2',
-        type: 'disc',
-        prompt: 'Explique o que são as raízes de uma função quadrática.',
-        options: [],
-        answer: '',
-        difficulty: 'M',
-      },
-    ],
-    createdAt: '2026-01-22T14:00:00',
+    id: 'm7',
+    ownerId: 't2',
+    title: 'Era Vargas: 1930 a 1945',
+    subject: 'História',
+    grade: '3º ano',
+    summary: 'Industrialização, trabalhismo e Estado Novo.',
+    content:
+      'Golpe de 1937, políticas sociais, propaganda e impacto nas instituições.',
+    isPublic: true,
+    deleted: false,
+    clonedFromId: null,
+    updatedAt: '2026-01-17T14:20:00',
+    lastExamAt: null,
+    lastExamQuestionCount: 0,
+  },
+  {
+    id: 'm8',
+    ownerId: 't2',
+    title: 'Ditadura Militar: 1964-1985',
+    subject: 'História',
+    grade: '3º ano',
+    summary: 'AI-5, repressão e abertura política.',
+    content:
+      'Contexto do golpe, censura, resistência e redemocratização.',
+    isPublic: true,
+    deleted: false,
+    clonedFromId: null,
+    updatedAt: '2026-01-22T10:05:00',
+    lastExamAt: null,
+    lastExamQuestionCount: 0,
+  },
+  {
+    id: 'm9',
+    ownerId: 't2',
+    title: 'Revolução Industrial e impactos sociais',
+    subject: 'História',
+    grade: '2º ano',
+    summary: 'Mudanças no trabalho e urbanização acelerada.',
+    content:
+      'Invenções, novas relações de trabalho e transformações sociais.',
+    isPublic: false,
+    deleted: false,
+    clonedFromId: null,
+    updatedAt: '2026-01-19T16:45:00',
+    lastExamAt: null,
+    lastExamQuestionCount: 0,
+  },
+  {
+    id: 'm10',
+    ownerId: 't2',
+    title: 'Guerra Fria e blocos geopolíticos',
+    subject: 'História',
+    grade: '2º ano',
+    summary: 'Bipolaridade, corrida armamentista e conflitos indiretos.',
+    content:
+      'Plano Marshall, OTAN, Pacto de Varsóvia e guerras por procuração.',
+    isPublic: false,
+    deleted: false,
+    clonedFromId: null,
+    updatedAt: '2026-01-15T12:15:00',
+    lastExamAt: null,
+    lastExamQuestionCount: 0,
+  },
+  {
+    id: 'm11',
+    ownerId: 't3',
+    title: 'Genética básica: DNA e hereditariedade',
+    subject: 'Biologia',
+    grade: '1º ano',
+    summary: 'Estrutura do DNA e conceitos de genes e alelos.',
+    content:
+      'Replicação, código genético e exemplos simples de herança.',
+    isPublic: true,
+    deleted: false,
+    clonedFromId: null,
+    updatedAt: '2026-01-21T08:00:00',
+    lastExamAt: null,
+    lastExamQuestionCount: 0,
+  },
+  {
+    id: 'm12',
+    ownerId: 't3',
+    title: 'Ecologia: cadeias e teias alimentares',
+    subject: 'Biologia',
+    grade: '2º ano',
+    summary: 'Relações ecológicas e equilíbrio dos ecossistemas.',
+    content:
+      'Produtores, consumidores, decompositores e impactos ambientais.',
+    isPublic: true,
+    deleted: false,
+    clonedFromId: null,
+    updatedAt: '2026-01-16T13:30:00',
+    lastExamAt: null,
+    lastExamQuestionCount: 0,
+  },
+  {
+    id: 'm13',
+    ownerId: 't3',
+    title: 'Fisiologia humana: sistema respiratório',
+    subject: 'Biologia',
+    grade: '2º ano',
+    summary: 'Estruturas, função e cuidados com a saúde.',
+    content:
+      'Trocas gasosas, pulmões, diafragma e hábitos saudáveis.',
+    isPublic: false,
+    deleted: false,
+    clonedFromId: null,
+    updatedAt: '2026-01-18T10:50:00',
+    lastExamAt: null,
+    lastExamQuestionCount: 0,
+  },
+  {
+    id: 'm14',
+    ownerId: 't3',
+    title: 'Biotecnologia e aplicações',
+    subject: 'Biologia',
+    grade: '3º ano',
+    summary: 'Transgênicos, vacinas e uso em saúde.',
+    content:
+      'Principais técnicas e debates éticos na biotecnologia.',
+    isPublic: false,
+    deleted: false,
+    clonedFromId: null,
+    updatedAt: '2026-01-14T09:10:00',
+    lastExamAt: null,
+    lastExamQuestionCount: 0,
+  },
+  {
+    id: 'm15',
+    ownerId: 't3',
+    title: 'Evolução e seleção natural',
+    subject: 'Biologia',
+    grade: '3º ano',
+    summary: 'Darwinismo e evidências evolutivas.',
+    content:
+      'Seleção natural, deriva genética e exemplos atuais.',
+    isPublic: true,
+    deleted: false,
+    clonedFromId: null,
+    updatedAt: '2026-01-23T17:05:00',
+    lastExamAt: null,
+    lastExamQuestionCount: 0,
   },
 ]
+
+const buildExamSeed = (material, index) => ({
+  id: `e${index + 1}`,
+  ownerId: material.ownerId,
+  materialId: material.id,
+  title: `Questionário - ${material.title}`,
+  questions: [
+    {
+      id: 'q1',
+      type: 'mcq',
+      prompt: `Sobre ${material.subject}, qual alternativa melhor descreve um conceito-chave do tema?`,
+      options: ['Alternativa A', 'Alternativa B', 'Alternativa C', 'Alternativa D'],
+      answer: 'Alternativa B',
+      difficulty: 'F',
+    },
+    {
+      id: 'q2',
+      type: 'disc',
+      prompt: `Explique, com suas palavras, como o conteúdo de "${material.title}" se aplica no cotidiano.`,
+      options: [],
+      answer: '',
+      difficulty: 'M',
+    },
+  ],
+  createdAt: material.updatedAt,
+})
+
+const examsSeed = materialsSeed.map((material, index) => buildExamSeed(material, index))
 
 const commentsSeed = [
   {
@@ -275,7 +483,7 @@ function App() {
             className={view === 'exams' ? 'active' : ''}
             onClick={() => setView('exams')}
           >
-            Provas
+            Questionários
           </button>
         </nav>
         <div className="profile">
@@ -291,6 +499,7 @@ function App() {
         {view === 'materials' && (
           <MaterialsView
             materials={myMaterials}
+            exams={exams}
             showDeleted={showDeleted}
             onToggleShowDeleted={() => setShowDeleted((prev) => !prev)}
             onCreate={createMaterial}
@@ -362,6 +571,7 @@ function App() {
 
 function MaterialsView({
   materials,
+  exams,
   showDeleted,
   onToggleShowDeleted,
   onCreate,
@@ -453,8 +663,10 @@ function MaterialsView({
               <p>Crie o primeiro material para iniciar o MVP.</p>
             </div>
           ) : (
-            materials.map((material) => (
-              <article key={material.id} className="card">
+            materials.map((material) => {
+              const examCount = exams.filter((exam) => exam.materialId === material.id).length
+              return (
+                <article key={material.id} className="card">
                 <div className="card-head">
                   <div>
                     <h3>{material.title}</h3>
@@ -469,6 +681,9 @@ function MaterialsView({
                 <p>{material.summary || 'Sem resumo.'}</p>
                 <div className="meta">
                   <span>Atualizado: {shortDate(material.updatedAt)}</span>
+                  <span className={`badge ${examCount > 0 ? 'badge--success' : 'badge--muted'}`}>
+                    Questionários: {examCount}
+                  </span>
                   {material.deleted && <span>Arquivado</span>}
                 </div>
                 <div className="actions">
@@ -483,7 +698,8 @@ function MaterialsView({
                   </button>
                 </div>
               </article>
-            ))
+              )
+            })
           )}
         </div>
       </div>
@@ -540,7 +756,7 @@ function MaterialDetail({
 
       {alertVisible && (
         <div className="alert">
-          ⚠️ IA simulada: o conteúdo mudou desde a última prova. Revise{' '}
+          ⚠️ IA simulada: o conteúdo mudou desde o último questionário. Revise{' '}
           {material.lastExamQuestionCount || 0} questões.
         </div>
       )}
@@ -588,20 +804,20 @@ function MaterialDetail({
           <div className="card">
             <h3>IA como assistente (simulada)</h3>
             <p>
-              A IA ajuda a revisar clareza e indicar ajustes pedagógicos antes da prova.
+              A IA ajuda a revisar clareza e indicar ajustes pedagógicos antes do questionário.
             </p>
             <button className="ghost" onClick={() => setAlertVisible(true)}>
               ✨ IA: revisar conteúdo
             </button>
           </div>
           <div className="card highlight">
-            <h3>Gerar prova a partir do material</h3>
-            <p>Crie questões, defina dificuldade e salve a avaliação.</p>
+            <h3>Gerar questionário a partir do material</h3>
+            <p>Crie questões, defina dificuldade e salve o questionário.</p>
             <button className="primary" onClick={onCreateExam}>
-              Criar prova
+              Criar questionário
             </button>
             <div className="meta">
-              Última prova: {material.lastExamAt ? shortDate(material.lastExamAt) : '—'}
+              Último questionário: {material.lastExamAt ? shortDate(material.lastExamAt) : '—'}
             </div>
           </div>
         </div>
@@ -611,7 +827,7 @@ function MaterialDetail({
 }
 
 function ExamBuilder({ material, onBack, onSave }) {
-  const [title, setTitle] = useState(`Prova - ${material.title}`)
+  const [title, setTitle] = useState(`Questionário - ${material.title}`)
   const [questions, setQuestions] = useState([])
   const [draft, setDraft] = useState({
     type: 'mcq',
@@ -645,15 +861,15 @@ function ExamBuilder({ material, onBack, onSave }) {
       {
         id: `q${questions.length + 1}`,
         type: 'mcq',
-        prompt: `Questão IA: com base em "${material.subject}", qual conceito resume o tema?`,
-        options: ['Opção A', 'Opção B', 'Opção C', 'Opção D'],
-        answer: 'Opção B',
+        prompt: `Questão IA: qual alternativa melhor sintetiza "${material.title}"?`,
+        options: ['Alternativa A', 'Alternativa B', 'Alternativa C', 'Alternativa D'],
+        answer: 'Alternativa B',
         difficulty: 'F',
       },
       {
         id: `q${questions.length + 2}`,
         type: 'disc',
-        prompt: 'Questão IA: explique a relação entre o conteúdo e o cotidiano do aluno.',
+        prompt: `Questão IA: descreva um exemplo prático de "${material.subject}" aplicado na vida real.`,
         options: [],
         answer: '',
         difficulty: 'M',
@@ -679,7 +895,7 @@ function ExamBuilder({ material, onBack, onSave }) {
           <button className="link" onClick={onBack}>
             ← voltar
           </button>
-          <h1>Nova prova</h1>
+          <h1>Novo questionário</h1>
           <p>
             {material.title} • {material.subject}
           </p>
@@ -696,7 +912,7 @@ function ExamBuilder({ material, onBack, onSave }) {
 
       <div className="grid two">
         <div className="card form">
-          <h3>Configurar prova</h3>
+          <h3>Configurar questionário</h3>
           <input value={title} onChange={(event) => setTitle(event.target.value)} />
           <div className="divider" />
           <h4>Nova questão</h4>
@@ -764,7 +980,7 @@ function ExamBuilder({ material, onBack, onSave }) {
             onClick={() => onSave({ title, questions })}
             disabled={!title || questions.length === 0}
           >
-            Salvar prova
+            Salvar questionário
           </button>
         </div>
 
@@ -793,7 +1009,7 @@ function ExamBuilder({ material, onBack, onSave }) {
           <div className="card highlight">
             <h3>Checklist MVP</h3>
             <ul className="checklist">
-              <li>Prova vinculada ao material</li>
+              <li>Questionário vinculado ao material</li>
               <li>IA simulada gera questões</li>
               <li>Dificuldade marcada (F/M/D)</li>
             </ul>
@@ -810,14 +1026,14 @@ function ExamsView({ exams, materials, onOpen }) {
       <header className="section-header">
         <div>
           <p className="eyebrow">Avaliações</p>
-          <h1>Minhas provas</h1>
+          <h1>Meus questionários</h1>
         </div>
       </header>
       <div className="grid two">
         {exams.length === 0 ? (
           <div className="card empty">
-            <h3>Nenhuma prova criada</h3>
-            <p>Crie provas a partir de um material para aparecer aqui.</p>
+            <h3>Nenhum questionário criado</h3>
+            <p>Crie questionários a partir de um material para aparecer aqui.</p>
           </div>
         ) : (
           exams.map((exam) => {
@@ -828,7 +1044,7 @@ function ExamsView({ exams, materials, onOpen }) {
                 <p>{material?.title}</p>
                 <div className="meta">
                   <span>{exam.questions.length} questões</span>
-                  <span>Criada em {shortDate(exam.createdAt)}</span>
+                  <span>Criado em {shortDate(exam.createdAt)}</span>
                 </div>
                 <button className="ghost" onClick={() => onOpen(exam.id)}>
                   Ver detalhes
