@@ -1,16 +1,62 @@
-# React + Vite
+# EduColab (MVP Hackathon 5FSDT)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Plataforma colaborativa para professores do ensino público com foco em:
+1) criação de materiais didáticos,
+2) geração de questionários a partir do material,
+3) compartilhamento e melhoria colaborativa.
 
-Currently, two official plugins are available:
+Este MVP utiliza dados fake em memória e IA simulada para demonstrar o fluxo principal.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## O que foi desenvolvido
 
-## React Compiler
+- Login fake por perfil de professor (sem senha).
+- CRUD de materiais: criar, listar, ver detalhe, editar e arquivar (soft delete).
+  - Disciplina com lista pré-definida.
+- Questionário por material:
+  - criação manual de questões (múltipla escolha + dissertativa),
+  - marcação de dificuldade (F/M/D),
+  - salvamento e visualização.
+- Comunidade:
+  - listar materiais públicos,
+  - clonar material para “meus materiais”,
+  - comentar sugestões de melhoria.
+- IA simulada:
+  - “sugerir questões”,
+  - “avaliar dificuldade”,
+  - alerta quando conteúdo muda e requer revisão.
+  - notificação de revisão após cadastro de material.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Stack
 
-## Expanding the ESLint configuration
+- React + Vite
+- CSS puro
+- Mock local (sem back-end)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Como rodar localmente
+
+Requisitos:
+- Node.js 18+
+
+Passos:
+```bash
+npm install
+npm run dev
+```
+
+O app ficará disponível em:
+```
+http://localhost:5173/
+```
+
+## Build de produção (opcional)
+
+```bash
+npm run build
+npm run preview
+```
+
+## Observações
+
+- Todo o conteúdo é mockado e fica em memória.
+- Não há persistência real nem integração com API/IA.
+- Ideal para demo e gravação do pitch/MVP.

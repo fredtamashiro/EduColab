@@ -290,6 +290,19 @@ const commentsSeed = [
 
 const nowIso = () => new Date().toISOString()
 const shortDate = (iso) => (iso ? new Date(iso).toLocaleDateString('pt-BR') : '—')
+const subjects = [
+  'Matemática',
+  'Português',
+  'História',
+  'Geografia',
+  'Biologia',
+  'Física',
+  'Química',
+  'Sociologia',
+  'Filosofia',
+  'Inglês',
+  'Artes',
+]
 
 function App() {
   const nextId = useRef(10)
@@ -352,6 +365,8 @@ function App() {
       isPublic: false,
       deleted: false,
       clonedFromId: null,
+      aiReviewSuggestions: 2,
+      aiReviewedAt: nowIso(),
       updatedAt: nowIso(),
       lastExamAt: null,
       lastExamQuestionCount: 0,
@@ -579,6 +594,7 @@ function MaterialsView({
   onDelete,
   onTogglePublic,
 }) {
+  const [aiNotice, setAiNotice] = useState('')
   const [form, setForm] = useState({
     title: '',
     subject: '',
@@ -605,6 +621,15 @@ function MaterialsView({
         </div>
       </header>
 
+      {aiNotice && (
+        <div className="alert">
+          {aiNotice}
+          <button className="ghost" onClick={() => setAiNotice('')}>
+            Fechar
+          </button>
+        </div>
+      )}
+
       <div className="grid two">
         <form
           className="card form"
@@ -618,6 +643,9 @@ function MaterialsView({
               summary: form.summary,
               content: form.content,
             })
+            setAiNotice(
+              `✨ IA simulada: revisão inicial concluída. 2 sugestões disponíveis para "${form.title}".`
+            )
             resetForm()
           }}
         >
@@ -628,11 +656,17 @@ function MaterialsView({
             onChange={(event) => setForm({ ...form, title: event.target.value })}
           />
           <div className="grid two compact">
-            <input
-              placeholder="Disciplina"
+            <select
               value={form.subject}
               onChange={(event) => setForm({ ...form, subject: event.target.value })}
-            />
+            >
+              <option value="">Disciplina</option>
+              {subjects.map((subject) => (
+                <option key={subject} value={subject}>
+                  {subject}
+                </option>
+              ))}
+            </select>
             <input
               placeholder="Ano/série"
               value={form.grade}
@@ -769,10 +803,17 @@ function MaterialDetail({
             onChange={(event) => setForm({ ...form, title: event.target.value })}
           />
           <div className="grid two compact">
-            <input
+            <select
               value={form.subject}
               onChange={(event) => setForm({ ...form, subject: event.target.value })}
-            />
+            >
+              <option value="">Disciplina</option>
+              {subjects.map((subject) => (
+                <option key={subject} value={subject}>
+                  {subject}
+                </option>
+              ))}
+            </select>
             <input
               value={form.grade}
               onChange={(event) => setForm({ ...form, grade: event.target.value })}
