@@ -43,6 +43,17 @@
   margin-top: 20px;
 }
 
+.card.select strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.card.select span {
+  display: block;
+  color: var(--accent-2);
+  font-weight: 600;
+}
+
 .login-note {
   margin-top: 20px;
   font-weight: 600;
